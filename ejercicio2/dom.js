@@ -1,4 +1,5 @@
 let body = document.querySelector("body");
+let divDoc = document.querySelectorAll("div");
 
 //2.1
 let div = document.createElement("div");
@@ -52,13 +53,24 @@ for(let i = 0; i < eliminar.length; i++){
 }
 
 //2.8
-let p8 = document.createElement("p");
-p8.innerText = 'Voy en medio!';
-
-let div8 = document.querySelectorAll("div");
-console.log(p8);
-for(let i = 0; i < div8.length; i++){
-    if(div8[i].className == ""){
-        div8[i].innerHTML = p8;
+let p8;
+for (let i = 0; i < divDoc.length; i++){
+    if(divDoc[i].className == ""){
+        p8 = document.createElement("p");
+        p8.innerText = 'Voy en medio!';
+        divDoc[i].append(p8);
     }
+}
+
+//2.9
+
+let cambio = document.querySelectorAll("div.fn-insert-here");
+let p9;
+let texto9;
+
+for(let i = 0; i < cambio.length; i++){
+    p9 = document.createElement("p");
+    texto9 = document.createTextNode("Voy dentro!");
+    p9.appendChild(texto9);
+    cambio[i].appendChild(p9);
 }
