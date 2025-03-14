@@ -18,8 +18,8 @@ body.appendChild(div2);
 let div3 = document.createElement("div");
 for(let i = 0; i < 6; i++){
     let Pnuevo = document.createElement("p");
-    let textoPnuecvo = document.createTextNode(`El texto de la p ${i + 1}`);
-    Pnuevo.appendChild(textoPnuecvo);
+    let textoPnuevo = document.createTextNode(`El texto de la p ${i + 1}`);
+    Pnuevo.appendChild(textoPnuevo);
     div3.appendChild(Pnuevo);
 }
 body.appendChild(div3);
